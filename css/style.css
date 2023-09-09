@@ -348,14 +348,15 @@ body {
     }
 
     #dados {
-	font-size: 34px;
         display: flex;
         justify-content: center;
         flex-wrap: nowrap;
         margin-top: 0;
+        align-items: center;
     }
 
     .secao-principal h1 {
+	font-size: 34px;
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
