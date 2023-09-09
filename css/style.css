@@ -348,6 +348,7 @@ body {
     }
 
     #dados {
+	font-size: 34px;
         display: flex;
         justify-content: center;
         flex-wrap: nowrap;
