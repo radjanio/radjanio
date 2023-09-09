@@ -303,13 +303,16 @@ body {
     }
 
     .icon-menu-mobile {
-        display: block;
+	display: flex;
+        justify-content: center;
     }
 
     .icon-menu-mobile button {
         background-color: transparent;
         border: none;
         cursor: pointer;
+	width: 35px;
+        height: 35px;
     }
 
     .menu-mobile ul {
@@ -327,7 +330,6 @@ body {
     .icon {
         width: 30px;
         height: 30px;
-        margin-left: 80px;
     }
 
     .menu-mobile button {
