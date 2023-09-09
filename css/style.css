@@ -148,8 +148,7 @@ body {
 
 .slider {
 	width: 1024px;
-	margin: 2em auto;
-    position: relative;
+    	position: relative;
 	
 }
 
@@ -166,12 +165,12 @@ body {
 	height: 150px;
 	opacity: 0;
 	transition: opacity 3s linear;
-    width: 210px;
-    height: 210px;
-    float: left;
-    box-sizing: border-box;
-    border: 2px solid #f9b17a;
-    border-radius: 10px;
+    	width: 210px;
+    	height: 210px;
+    	float: left;
+    	box-sizing: border-box;
+    	border: 2px solid #f9b17a;
+    	border-radius: 10px;
 }
 
 .slider-wrapper > .slide:first-child {
@@ -406,6 +405,11 @@ body {
     .slide {
         width: 120px;
         height: 120px;
+    }
+	
+	.slider {
+        width: 130px;
+        height: 130px;
     }
 
     #sobre-mim h3 {
