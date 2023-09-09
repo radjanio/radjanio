@@ -148,7 +148,7 @@ body {
 
 .slider {
 	width: 1024px;
-    	position: relative;
+    position: relative;
 	
 }
 
@@ -165,12 +165,12 @@ body {
 	height: 150px;
 	opacity: 0;
 	transition: opacity 3s linear;
-    	width: 210px;
-    	height: 210px;
-    	float: left;
-    	box-sizing: border-box;
-    	border: 2px solid #f9b17a;
-    	border-radius: 10px;
+    width: 210px;
+    height: 210px;
+    float: left;
+    box-sizing: border-box;
+    border: 2px solid #f9b17a;
+    border-radius: 10px;
 }
 
 .slider-wrapper > .slide:first-child {
@@ -187,7 +187,7 @@ body {
 
 #sobre-mim p {
     color: #ffffff;
-    font-size: 22px;
+    font-size: 20px;
     display: flex;
     padding-top: 20px;
     padding-left: 10px;
@@ -225,6 +225,11 @@ body {
     padding-bottom: 20px;
 }
 
+.front, .back p {
+    font-size: 12px;
+    margin: 0 5px 0 5px;
+}
+
 .front {
     background-color: #f9b17a;
     color: #424769;
@@ -236,10 +241,19 @@ body {
     height: 50px;
 }
 
+.back img {
+    margin: 10px 0 5px 0;
+    width: 50px;
+    height: 50px;
+}
+
 .back{
     background-color: #424769;
     color: #f9b17a;
     transform: rotateY(-180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .card:hover .front{
@@ -302,15 +316,16 @@ body {
     }
 
     .icon-menu-mobile {
-	display: flex;
+        display: flex;
         justify-content: center;
+
     }
 
     .icon-menu-mobile button {
         background-color: transparent;
         border: none;
         cursor: pointer;
-	width: 35px;
+        width: 35px;
         height: 35px;
     }
 
@@ -357,7 +372,7 @@ body {
     }
 
     .secao-principal h1 {
-	font-size: 34px;
+        font-size: 34px;
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
@@ -397,8 +412,8 @@ body {
     }
 
     .slider-wrapper {
-        width: 120px;
-        height: 120px;
+        width: 180px;
+        height: 180px;
         position: relative;
     }
 
@@ -406,11 +421,12 @@ body {
         width: 120px;
         height: 120px;
     }
-	
-	.slider {
+
+    .slider {
         width: 130px;
         height: 130px;
     }
+    
 
     #sobre-mim h3 {
         font-size: 17px;
@@ -448,3 +464,4 @@ body {
         font-size: 12px;
     }
 }
+
