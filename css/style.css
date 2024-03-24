@@ -4,10 +4,11 @@ body {
     transition: background-color 0.5s, color 0.5s;
 }
 
-.modo-escuro body {
+body .modo-escuro {
     background-color: var(--cor-bg-escuro);
     color: var(--cor-texto-escuro);
 }
+
 
 #menu {
     position: fixed;
