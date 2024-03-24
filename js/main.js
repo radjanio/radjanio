@@ -76,3 +76,8 @@ function menuShow() {
 	
 })();
 
+const botaoModoEscuro = document.getElementById('modo-escuro');
+
+botaoModoEscuro.addEventListener('click', () => {
+    document.body.classList.toggle('modo-escuro');
+});
