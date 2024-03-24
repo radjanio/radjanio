@@ -1,8 +1,7 @@
 body {
-    background: #2d3250;
-    width: 100%;
-    margin: 0 auto;
-    font-family: 'Open Sans', sans-serif;
+    background-color: var(--cor-bg-claro);
+    color: var(--cor-texto-claro);
+    transition: background-color 0.5s, color 0.5s;
 }
 
 #menu {
