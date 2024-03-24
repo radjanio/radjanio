@@ -10,6 +10,32 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
         <title>Radjanio S. Souza</title>
+<style>
+  :root {
+    --cor-bg-claro: #fff; /* Light mode background color */
+    --cor-texto-claro: #000; /* Light mode text color */
+    --cor-bg-escuro: #222; /* Dark mode background color */
+    --cor-texto-escuro: #fff; /* Dark mode text color */
+    --cor-card-escuro: #FFC567; /* Dark mode card front color */
+  }
+
+  body {
+    background-color: var(--cor-bg-claro);
+    color: var(--cor-texto-claro);
+    transition: background-color 0.5s, color 0.5s;
+  }
+
+  .modo-escuro {
+    background-color: var(--cor-bg-escuro);
+    color: var(--cor-texto-escuro);
+  }
+
+  /* ... other styles ... */
+
+  .card.modo-escuro .front {
+    background-color: var(--cor-card-escuro);
+  }
+</style>
     </head>
 
     <body>
