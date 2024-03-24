@@ -11,128 +11,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
     <title>Radjanio S. Souza</title>
 </head>
+<body>
 
-<body class="modo-claro">
-    <section id="menu">
-        <nav class="nav-bar">
-            <div class="nav-list">
-                <ul>
-                    <li class="nav-item"><a href="#secao-principal" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#sobre-mim" class="nav-link">Sobre mim</a></li>
-                    <a href="https://github.com/radjanio"><img id="github-nav" src="imagens/logo-github.png"></a>
-                </ul>
-            </div>
-        </nav>
-        <h1>Exemplo de Modo Claro/Escuro</h1>
-        <p>Este texto muda de cor com o tema.</p>
-        <button id="modo-escuro">Ativar Modo Escuro</button>
+<!-- Menu de navegação -->
+<div class="menu">
+  <a href="#home">Home</a>
+  <a href="#about">Sobre</a>
+  <a href="#portfolio">Portfólio</a>
+  <a href="#contact">Contato</a>
+</div>
 
-        <div class="icon-menu-mobile">
-            <button onclick="menuShow()"><img class="icon" src="imagens/menu-hamburguer.png"></button>
-        </div>
+<!-- Botão para alternar o modo claro/escuro -->
+<button onclick="toggleDarkMode()">Modo Escuro</button>
 
-        <div class="menu-mobile">
-            <ul>
-                <li><a href="#secao-principal">Home</a></li>
-                <li><a href="#sobre-mim">Sobre mim</a></li>
-            </ul>
-        </div>
-    </section>
+<!-- Slider de imagens -->
+<div class="slider">
+  <img class="slide active-slide" src="foto1.jpg" alt="Foto 1">
+  <img class="slide" src="foto2.jpg" alt="Foto 2">
+  <!-- Adicione mais imagens conforme necessário -->
+</div>
 
-    <section class="secao-principal" id="secao-principal">
-        <div id="dados">
-            <h2>Olá mundo, eu sou</h2>
-            <h1>Radjanio Silva Souza</h1>
-            <h3>Web Devloper, Devloper Frontend, Estudante.</h3>
-        </div>
-        <div id="img-home">
-            <img id="img-programming" src="imagens/logo-radjanio.png" alt="Logo de Radjanio">
-        </div>
-    </section>
-
-    <section class="midias-profile">
-        <a href="https://github.com/radjanio" target="_blank"><img id="github" src="imagens/logo-github.png"></a>
-        <a href="https://www.linkedin.com/in/radjanio/" target="_blank"><img id="linkedin" src="imagens/logo-linkedin.png"></a>
-        <a href="https://www.instagram.com/iam.radjanio/" target="_blank"><img id="instagram" src="imagens/logo-instagram.png" alt=""></a>
-        <a href="https://www.twitter.com/radjaniocat/" target="_blank"><img id="x" src="imagens/logo-x.png" alt=""></a>
-    </section>
-
-    <section id="sobre-mim">
-        <div class="slider" id="main-slider">
-            <div class="slider-wrapper">
-                <img src="imagens/radjanio-1.jpeg" alt="First" class="slide" />
-                <img src="imagens/radjanio-2.jpg" alt="Second" class="slide" />
-                <img src="imagens/radjanio-3.jpg" alt="Third" class="slide" />
-            </div>
-        </div>  
-        <div class="dados-sobre-mim">
-            <h3>Sobre mim</h3>
-            <p>Meu nome é Radjanio, tenho 18 anos de idade e estou cursando o último ano do ensino médio em uma escola pública.
-                Quando criança, tive vontade de desenvolver meus próprios jogos e apps,
-                foi a partir dessa vontade que me apaixonei pela tecnologia e programação.
-                A cada linha escrita, sinto-me mais conectado com o mundo da tecnlogia.
-            </p>
-        </div>
-    </section>
-
-    <section id="sec-cards">
-        <div class="card">
-            <div class="front">
-                <h3>Educação</h3>
-                <img src="imagens/educacao.png">
-            </div>
-            <div class="back">
-                <img src="imagens/educacao-2.png">
-                <p>
-                Fiz o curso de Assistente Administrativo (2022), ofertado pelo SENAI. Logo em seguida fiz
-                Alura Include - Amigos do Bem (2022) HTML, CSS e JavaScript.
-                Recentemente finalizei o curso de Programador de Sistemas, pelo SENAC.
-                Estou cursando o último ano do ensino médio.
-            </p></div>
-        </div>
-        <div class="card">
-            <div class="front">
-                <h3>Habilidades</h3>
-                <img src="imagens/habilidades.png">
-            </div>
-            <div class="back">
-                <img src="imagens/habilidades-2.png">
-                <p>
-                    Tenho habilidades em HTML, CSS e JavaScript
-                </p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="front">
-                <h3>Interesses</h3>
-                <img src="imagens/interesses.png">
-            </div>
-            <div class="back">
-                <img src="imagens/interesses-2.png">
-                <p>
-                    Tenho interesse em programação web e sistemas.
-                </p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="front">
-                <h3>Hobbies</h3>
-                <img src="imagens/hobbies.png">
-            </div>
-            <div class="back">
-                <img src="imagens/hobbies-2.png">
-                <p>
-                    Vou à academia, leio livros, mangás, assisto séries, filmes e anime (amo animações japonesas)
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="rodape">
-        <p>Fale comigo através do <a href="mailto:radjaniosilvasouza7@gmail.com">e-mail</a> ou do <a href="https://wa.me/5582981746166">Whatsapp</a>.</p>
-    </section>
-
-    <script src="js/main.js"></script>
+<!-- Cards com informações pessoais -->
+<div class="card">Informações do Card 1</div>
+<div class="card">Informações do Card 2</div>
+<div class="card">Informações do Card 3</div>
+<div class="card">Informações do Card 4</div>
 </body>
-
+    <script src="js/main.js"></script>
 </html>
