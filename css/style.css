@@ -69,6 +69,35 @@ body {
 .menu-mobile {
     display: none;
 }
+
+/* Variáveis de cores */
+:root {
+    --cor-texto-claro: #000;
+    --cor-texto-escuro: #fff;
+    --cor-bg-claro: #fff;
+    --cor-bg-escuro: #222;
+}
+
+#modo-escuro {
+    background-color: var(--cor-texto-claro);
+    color: var(--cor-bg-claro);
+    border: 1px solid var(--cor-texto-claro);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Modo Escuro */
+.modo-escuro {
+    background-color: var(--cor-bg-escuro);
+    color: var(--cor-texto-escuro);
+}
+
+.modo-escuro #modo-escuro {
+    background-color: var(--cor-texto-escuro);
+    color: var(--cor-bg-escuro);
+}
+
 .secao-principal {
     background: linear-gradient(to bottom, transparent 0%, #2d3250 95%), url(../imagens/nasa.jpg);
     width: 100%;
