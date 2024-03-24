@@ -271,4 +271,75 @@ body {
 
 .back img {
     margin
+	: 0 auto;
+    width: 80px;
+    height: 80px;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: #2d3250;
+    color: #f9b17a;
+}
+
+.card:hover .front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: rotateY(0deg);
+}
+
+.rodape {
+    background-color: #2d3250;
+    height: 100px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.rodape p {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #f9b17a;
+}
+
+a:hover {
+    color: #424769;
+}
+
+/* Efeitos de animação */
+@keyframes animate {
+    0% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes rgb-background {
+    0% {
+        background-color: #ff0000;
+    }
+    25% {
+        background-color: #00ff00;
+    }
+    50% {
+        background-color: #0000ff;
+    }
+    75% {
+        background-color: #ffff00;
+    }
+    100% {
+        background-color: #ff00ff;
+    }
+}
+
 	
