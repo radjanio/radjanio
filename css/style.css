@@ -294,7 +294,6 @@ body {
 .rodape {
     width: 100%;
     height: 200px;
-    background: linear-gradient(to top, transparent 0, #2d3250 95%), url(../imagens/nasa.jpg);
 }
 
 .rodape p {
