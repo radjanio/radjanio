@@ -2,40 +2,91 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="imagens/logo-radjanio.png">
+    <title>Radjanio</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
-    <title>Radjanio S. Souza</title>
 </head>
 <body>
-
-<!-- Menu de navegação -->
-<div class="menu">
-  <a href="#home">Home</a>
-  <a href="#about">Sobre</a>
-  <a href="#portfolio">Portfólio</a>
-  <a href="#contact">Contato</a>
+  <section class="menu">
+            <button id="darkModeToggle"><img     id="dark-img" src="img/dia-e-noite.png" alt="">
+      </button>
+            <nav class="nav-bar">
+                <div class="nav-list">
+                    <ul>
+                        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#sobre-mim" class="nav-link">Sobre mim</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="icon-menu-mobile">
+                <button onclick="menuShow()"><img class="icon" src="img/on-menu.png"></button>
+            </div>
+            <div class="menu-mobile">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre-mim">Sobre mim</a></li>
+                </ul>
+            </div>
+            <script src="JavaScript/main.js"></script>
+        </section>
+        <section class="home">
+            <div id="textos-alternativos">
+  <p class="texto-1">Olá, estranho(a)!</p>
+  <p class="texto-2">Eu sou Radjanio</p>
+  <p class="texto-3">Desenvolvedor Front-end</p>
+  <p class="texto-4">e às vezes eu escrevo uns poemas :)</p>
 </div>
+</section>
+<section class="secao-perfil">
+  <div class="foto-perfil">
+    <img src="img/radjanio.jpg" alt="Foto de perfil">
+  </div>
+  <div class="campo-texto">
+    <p>Bem... Eu gosto de pessoas!</p>
+  </div>
+</section>
 
-<!-- Botão para alternar o modo claro/escuro -->
-<button onclick="toggleDarkMode()">Modo Escuro</button>
+<section class="social">
+            <a href="https://github.com/radjanio" target="_blank"><img id="github" src="img/github.png"></a>
+            <a href="https://www.instagram.com/iam.radjanio/" target="_blank"><img id="instagram" src="img/instagram.png" alt=""></a>
+            <a href="https://www.twitter.com/radjaniocat/" target="_blank"><img id="x" src="img/x.png" alt=""></a>
+            <a  href="https://www.tiktok.com/@iamradjanio" target="_blank"><img id="tik-tok" src="img/tik-tok.png" alt=""></a>
+        </section>
+<script>
+    const textosAlternativos = document.getElementById("textos-alternativos");
+const textos = document.querySelectorAll("#textos-alternativos p");
+let indiceTextoAtual = 0;
 
-<!-- Slider de imagens -->
-<div class="slider">
-  <img class="slide active-slide" src="foto1.jpg" alt="Foto 1">
-  <img class="slide" src="foto2.jpg" alt="Foto 2">
-  <!-- Adicione mais imagens conforme necessário -->
-</div>
+function alternarTexto() {
+  textos[indiceTextoAtual].style.display = "none";
+  indiceTextoAtual = (indiceTextoAtual + 1) % textos.length;
+  textos[indiceTextoAtual].style.display = "block";
+}
 
-<!-- Cards com informações pessoais -->
-<div class="card">Informações do Card 1</div>
-<div class="card">Informações do Card 2</div>
-<div class="card">Informações do Card 3</div>
-<div class="card">Informações do Card 4</div>
+setInterval(alternarTexto, 4000);
+</script>
+        </section>
+        <section class="container">
+    <div class="card" id="card1">
+      <h2>Educação</h2>
+      <p>MS Office - Amigos do Bem<br>
+      Assistente Administrativo - Senai<br>
+      Programador Web - Alura<br>
+      Programador de Sistemas - Senac<br>
+      Escrita Criativa - Udemy<br>
+      Web Design usando CMS - Amigos do Bem<br>
+      Programador Web - Senac (Em progresso)<br>
+      Inglês (Intermediário)</p>
+    </div>
+    <div class="card" id="card2">
+      <h2>Hobbies</h2>
+      <p>Ir à academia<br>
+      Ler muitos livros<br>
+      Assistir à filmes e séries<br>
+      Ouvir música<br>
+      e escrever poemas:)</p>
+    </div>
+  </section>
 </body>
-    <script src="js/main.js"></script>
 </html>
