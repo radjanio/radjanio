@@ -1,44 +1,327 @@
-  /* Estilos básicos com a cor principal retrô */
-  :root {
-    --cor-principal: #FFC567;
-  }
-  body {
+body {
+    margin: o auto;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--cor-principal);
-    color: #333; /* Cor do texto para contraste */
-    transition: background-color 0.5s;
+    background-color: #F2E7D8;
+    color: #333333;    
+    transition: background-color 0.7s, color 0.7s;
   }
-  .dark-mode {
-    background-color: #333;
-    color: white;
-  }
-  /* Estilos do menu com a cor principal */
-  .menu {
-    display: flex;
-    justify-content: space-around;
-    background-color: var(--cor-principal);
-    padding: 1rem;
-  }
-  /* Estilos dos cards com borda da cor principal */
-  .card {
-    margin: 1rem;
-    padding: 1rem;
-    border: 2px solid var(--cor-principal);
-    border-radius: 5px;
-  }
-  /* Botão para alternar o modo claro/escuro com a cor principal */
-  button {
-    background-color: var(--cor-principal);
-    color: #333;
+
+#darkModeToggle {
+    background-color: transparent;
     border: none;
-    padding: 0.5rem 1rem;
-    margin: 1rem;
+}
+
+#dark-img {
+    padding-top: 5px;
+    width: 2rem;
+}
+
+.menu {
+    display: flex;
+        flex-direction: column;
+        text-align: center;
+    justify-content: center;
+    position: fixed;
+    margin: 0 20px 0 0 ;
+    background-color: #F2E7D8;
+    width: 100%;
+    z-index: 1;     
+}
+
+.menu li {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 5px 10px;
+}
+
+.menu a {
+    color: #5E5247;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: #f9b17a;
+}
+
+.icon-menu-mobile {
+    display: none;
+}
+
+.menu-mobile {
+    display: none;
+}
+
+  .dark-mode {
+    background-color: #2C2926;
+    color: #BFB5A6;
+  }
+  
+  .dark-mode .menu {
+      background-color: #2C2926;
+  }
+  
+  .dark-mode .menu a{
+      color: #D8D0C7;
+  }
+  
+  .dark-mode .card #foto-perfil {
+      background-color: #363636;
+      border: 1px solid #FFB366;
+  }
+  
+  .dark-mode .texto-3 {
+      color: #FFB366;
+  }
+  
+.home {
+padding-top: 150px;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+}
+
+#textos-alternativos {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#textos-alternativos h2 {
+  text-align: center;
+}
+
+#textos-alternativos p {
+  text-align: center;
+  padding: 10px;
+}
+
+.texto-1,
+.texto-2,
+.texto-3,
+.texto-4 {
+    display: none;
+}
+
+.texto-3 {
+    font-weight: bold;"
+}
+
+.secao-perfil {
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 300px;
+  padding: 20px;
+}
+
+.foto-perfil {
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  border: 1px solid #C9B18C;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.foto-perfil img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.campo-texto {
+  flex: 1;
+}
+
+.campo-texto p {
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+
+.social {
+    width: 100%;
+    height: 60px;
+    display: inline-flex;
+    justify-content: center;
+}
+
+#github, #instagram, #x, #tik-tok {
+    width: 20px;
+    height: 20px;
+    background-color: #C9B18C;
+    color: #000000;
+    box-shadow: 1px 1px 1px #5E5247, 7px 1px 7px #000000;
     border-radius: 5px;
+    padding: 2px 4px;
+    margin: 0 10px;
+}
+
+.container {
+    width: 100%;
+    height: 250px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid #C9B18C;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  width: 210px;  
+  height:170px; 
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  font-weight: bold;
+  color: #5E5247;
+  margin-top: 0;
+}
+
+.card p {
+  color: #8D847C;
+  margin-bottom: 0;
+}
+  
+  @media (max-width: 768px) {
+  
+    .menu {
+        display: flex;
+        position: fixed;
+        align-items: center;
+    }
+
+    .menu li {
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 5px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .nav-bar {
+        display: none;
+    }
+
+    .nav-item {
+        display: none;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .icon-menu-mobile {
+       display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+  .icon-menu-mobile button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
     cursor: pointer;
-  }
-  button:hover {
-    background-color: #333;
-    color: var(--cor-principal);
-  }
+    display: flex;
+        flex-direction: column;
+        text-align: center;
+}
+
+.icon-menu-mobile img {
+    width: 100%;
+    height: auto;
+    display: flex;
+        flex-direction: column;
+        text-align: center;
+}
+
+
+    .menu-mobile ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .menu-mobile .nav-item {
+        display: block;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-mobile button {
+    display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .open {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .container {
+    display: inline-flex;
+    justify-content: center;
+}
+    .card {
+        width: 120px;
+    }
+    
+    .card p {
+        font-size: 10px;
+    }
+    
+    #perfil {
+        flex-direction: column;
+    }
+    
+    #img-perfil {
+        margin-bottom: 10px;
+    }
+
