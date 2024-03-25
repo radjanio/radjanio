@@ -1,13 +1,28 @@
-// Função para alternar o modo escuro
-function toggleDarkMode() {
-  document.body.classList.toggle('dark-mode');
+function menuShow() {
+    let menuMobile = document.querySelector('.menu-mobile');
+    if (menuMobile.classList.contains('open')) {
+        menuMobile.classList.remove('open');
+        document.querySelector('.icon').src =  "img/on-menu.png";
+    } else {
+        menuMobile.classList.add('open');
+        document.querySelector('.icon').src =  "img/off-menu.png";  
+    }
 }
 
-// Função para o slider de imagens
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-setInterval(() => {
-  slides[currentSlide].classList.remove('active-slide');
-  currentSlide = (currentSlide + 1) % slides.length;
-  slides[currentSlide].classList.add('active-slide');
-}, 3000); // Muda a imagem a cada 3 segundos
+const toggleButton = document.getElementById('darkModeToggle');
+  toggleButton.addEventListener('click', function() {
+  document.body.classList.toggle('dark-mode');
+  });
+  
+const menuMobileToggle = document.querySelector('#menu-mobile-toggle');
+const menuMobile = document.querySelector('menu-mobile');
+
+menuMobileToggle.addEventListener('click', () => {
+    menuMobile.classList.toggle('active');
+});
+
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('active');
+  });
+});
