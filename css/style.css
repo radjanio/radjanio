@@ -1,9 +1,12 @@
 body {
-    margin: o auto;
-    font-family: Arial, sans-serif;
-    background-color: #F2E7D8;
-    color: #333333;    
-    transition: background-color 0.7s, color 0.7s;
+  font-family: "MuseoModerno", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+      margin: o auto;
+      background-color: #F2E7D8;
+      color: #333333;    
+      transition: background-color 0.7s, color 0.7s;
   }
 
 #darkModeToggle {
@@ -37,7 +40,7 @@ body {
 
 .menu a {
     color: #5E5247;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     text-decoration: none;
     text-transform: none;
@@ -95,7 +98,7 @@ body {
       border: 1px solid #FFB366;
   }
   
-  .dark-mode .texto-3 {
+  .dark-mode span {
       color: #FFB366;
   }
   
@@ -103,13 +106,14 @@ body {
 padding-top: 150px;
     align-items: center;
     width: 100%;
-    height: 40px;
+    height: 50px;
 }
 
 #textos-alternativos {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  font-size: 25px;
 }
 
 #textos-alternativos h2 {
@@ -120,6 +124,12 @@ padding-top: 150px;
   text-align: center;
   padding: 10px;
 }
+
+.text-danger {
+  color: #C9B18C;
+  font-weight: bold;"
+}
+
 
 .texto-1,
 .texto-2,
@@ -133,17 +143,18 @@ padding-top: 150px;
 }
 
 .secao-perfil {
+  position: relative;
   display: flex;
   align-items: center;
   margin: 20px auto;
   width: 80%;
-  max-width: 300px;
-  padding: 20px;
+  padding: 50px;
+  max-width: 800px;
 }
 
 .foto-perfil {
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 250px;
   box-sizing: border-box;
   border: 1px solid #C9B18C;
   border-radius: 50%;
@@ -161,33 +172,44 @@ padding-top: 150px;
   flex: 1;
 }
 
+.campo-texto h1 {
+  font-size: 25px;
+font-weight: bold;
+}
+
+.campo-texto h2 {
+font-size: 17px;
+font-style: italic;
+margin-bottom: 0.5rem;
+}
+
 .campo-texto p {
-  font-size: 10px;
+  font-size: 20px;
   line-height: 1.5;
 }
 
 
 .social {
     width: 100%;
-    height: 60px;
+    height: 25px;
     display: inline-flex;
     justify-content: center;
 }
 
 #github, #instagram, #x, #tik-tok {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background-color: #C9B18C;
     color: #000000;
     box-shadow: 1px 1px 1px #5E5247, 7px 1px 7px #000000;
     border-radius: 5px;
     padding: 2px 4px;
-    margin: 0 10px;
+    margin: auto 5px;
 }
 
 .container {
     width: 100%;
-    height: 250px;
+    height: 400px;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -198,9 +220,9 @@ padding-top: 150px;
   border: 1px solid #C9B18C;
   border-radius: 5px;
   padding: 5px;
-  margin: 5px;
-  width: 210px;  
-  height:170px; 
+  margin: 39px;
+  width: 320px;
+  height: 220px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -213,13 +235,109 @@ padding-top: 150px;
   font-weight: bold;
   color: #5E5247;
   margin-top: 0;
+  font-size: 20px;
 }
 
 .card p {
   color: #8D847C;
   margin-bottom: 0;
+  padding-top: 10px;
 }
-  
+
+.home-livros {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.home-livros h1 {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.container-livros {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.livro {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: relative;
+  margin: 10px 30px 10px 0;
+}
+
+
+.livro img {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.livro .titulo {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.livro .autor {
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.livro .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.livro:hover .overlay {
+  opacity: 1;
+}
+
+.livro .acoes {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.livro:hover .acoes {
+  opacity: 1;
+}
+
+.livro .acoes a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+}
+
+.livro .acoes a.saiba-mais {
+  background-color: #333;
+}
+
+.livro .acoes a.comprar {
+  background-color: #f00;
+}
+
+
   @media (max-width: 768px) {
   
     .menu {
@@ -314,7 +432,7 @@ padding-top: 150px;
     }
     
     .card p {
-        font-size: 10px;
+        font-size: 9px;
     }
     
     #perfil {
@@ -324,4 +442,84 @@ padding-top: 150px;
     #img-perfil {
         margin-bottom: 10px;
     }
+
+  .container-livros {
+  height: 200px;
+  margin: 0 2.5rem 0 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px; /* Espaçamento entre livros de 10px */
+}
+
+.livro {
+  display: flex;
+  align-items: center;
+  max-width: 100px; /* Reduz a largura máxima dos livros */
+  padding: 5px; /* Reduz o padding interno dos livros */
+  ...
+}
+
+.livro img {
+  max-width: 65px; /* Define a largura da imagem como 70px */
+  height: auto; /* Mantém a altura da imagem proporcional */ /* Centraliza a imagem horizontalmente */
+}
+
+
+.livro .titulo {
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.livro .autor {
+  font-size: 9px;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.livro .overlay {
+  width: 100%; /* Define a largura do overlay como 70px */
+  height: 100%; /* Define a altura do overlay como 70px */
+  top: 50%; /* Posiciona o overlay verticalmente no centro */
+  left: 50%; /* Posiciona o overlay horizontalmente no centro */
+  transform: translate(-50%, -50%); /* Ajusta o posicionamento do overlay */
+}
+
+.livro:hover .overlay {
+  opacity: 1;
+}
+
+.livro .acoes {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.livro:hover .acoes {
+  opacity: 1;
+}
+
+.livro .acoes a {
+  padding: 3px 8px; /* Reduz o padding dos botões */
+  font-size: 9px; /* Reduz o tamanho da fonte dos botões */
+  ...
+}
+
+.livro .acoes a.saiba-mais {
+  background-color: #333;
+  ...
+}
+
+.livro .acoes a.comprar {
+  background-color: #f00;
+  ...
+}
+
+  
 
