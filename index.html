@@ -1,92 +1,525 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radjanio</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <section class="menu">
-            <button id="darkModeToggle"><img     id="dark-img" src="img/dia-e-noite.png" alt="">
-      </button>
-            <nav class="nav-bar">
-                <div class="nav-list">
-                    <ul>
-                        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="#sobre-mim" class="nav-link">Sobre mim</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="icon-menu-mobile">
-                <button onclick="menuShow()"><img class="icon" src="img/on-menu.png"></button>
-            </div>
-            <div class="menu-mobile">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#sobre-mim">Sobre mim</a></li>
-                </ul>
-            </div>
-            <script src="js/main.js"></script>
-        </section>
-        <section class="home">
-            <div id="textos-alternativos">
-  <p class="texto-1">Olá, estranho(a)!</p>
-  <p class="texto-2">Eu sou Radjanio</p>
-  <p class="texto-3">Desenvolvedor Front-end</p>
-  <p class="texto-4">e às vezes eu escrevo uns poemas :)</p>
-</div>
-</section>
-<section class="secao-perfil">
-  <div class="foto-perfil">
-    <img src="img/radjanio.jpg" alt="Foto de perfil">
-  </div>
-  <div class="campo-texto">
-    <p>Bem... Eu gosto de pessoas!</p>
-  </div>
-</section>
+body {
+  font-family: "MuseoModerno", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+      margin: o auto;
+      background-color: #F2E7D8;
+      color: #333333;    
+      transition: background-color 0.7s, color 0.7s;
+  }
 
-<section class="social">
-            <a href="https://github.com/radjanio" target="_blank"><img id="github" src="img/github.png"></a>
-            <a href="https://www.instagram.com/iam.radjanio/" target="_blank"><img id="instagram" src="img/instagram.png" alt=""></a>
-            <a href="https://www.twitter.com/radjaniocat/" target="_blank"><img id="x" src="img/x.png" alt=""></a>
-            <a  href="https://www.tiktok.com/@iamradjanio" target="_blank"><img id="tik-tok" src="img/tik-tok.png" alt=""></a>
-        </section>
-<script>
-    const textosAlternativos = document.getElementById("textos-alternativos");
-const textos = document.querySelectorAll("#textos-alternativos p");
-let indiceTextoAtual = 0;
-
-function alternarTexto() {
-  textos[indiceTextoAtual].style.display = "none";
-  indiceTextoAtual = (indiceTextoAtual + 1) % textos.length;
-  textos[indiceTextoAtual].style.display = "block";
+#darkModeToggle {
+    background-color: transparent;
+    border: none;
 }
 
-setInterval(alternarTexto, 4000);
-</script>
-        </section>
-        <section class="container">
-    <div class="card" id="card1">
-      <h2>Educação</h2>
-      <p>MS Office - Amigos do Bem<br>
-      Assistente Administrativo - Senai<br>
-      Programador Web - Alura<br>
-      Programador de Sistemas - Senac<br>
-      Escrita Criativa - Udemy<br>
-      Web Design usando CMS - Amigos do Bem<br>
-      Programador Web - Senac (Em progresso)<br>
-      Inglês (Intermediário)</p>
-    </div>
-    <div class="card" id="card2">
-      <h2>Hobbies</h2>
-      <p>Ir à academia<br>
-      Ler muitos livros<br>
-      Assistir à filmes e séries<br>
-      Ouvir música<br>
-      e escrever poemas:)</p>
-    </div>
-  </section>
-</body>
-</html>
+#dark-img {
+    padding-top: 5px;
+    width: 2rem;
+}
+
+.menu {
+    display: flex;
+        flex-direction: column;
+        text-align: center;
+    justify-content: center;
+    position: fixed;
+    margin: 0 20px 0 0 ;
+    background-color: #F2E7D8;
+    width: 100%;
+    z-index: 1;     
+}
+
+.menu li {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 5px 10px;
+}
+
+.menu a {
+    color: #5E5247;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: #f9b17a;
+}
+
+.icon-menu-mobile {
+    display: none;
+}
+
+.menu-mobile {
+    display: none;
+}
+
+  .dark-mode {
+    background-color: #2C2926;
+    color: #BFB5A6;
+  }
+  
+  .dark-mode .menu {
+      background-color: #2C2926;
+  }
+  
+  .dark-mode .menu a{
+      color: #D8D0C7;
+  }
+  
+  .dark-mode .card #foto-perfil {
+      background-color: #363636;
+      border: 1px solid #FFB366;
+  }
+  
+  .dark-mode span {
+      color: #FFB366;
+  }
+  
+.home {
+padding-top: 150px;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+#textos-alternativos {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+#textos-alternativos h2 {
+  text-align: center;
+}
+
+#textos-alternativos p {
+  text-align: center;
+  padding: 10px;
+}
+
+.text-danger {
+  color: #C9B18C;
+  font-weight: bold;"
+}
+
+
+.texto-1,
+.texto-2,
+.texto-3,
+.texto-4 {
+    display: none;
+}
+
+.texto-3 {
+    font-weight: bold;"
+}
+
+.secao-perfil {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
+  width: 80%;
+  padding: 50px;
+  max-width: 800px;
+}
+
+.foto-perfil {
+  width: 250px;
+  height: 250px;
+  box-sizing: border-box;
+  border: 1px solid #C9B18C;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.foto-perfil img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.campo-texto {
+  flex: 1;
+}
+
+.campo-texto h1 {
+  font-size: 25px;
+font-weight: bold;
+}
+
+.campo-texto h2 {
+font-size: 17px;
+font-style: italic;
+margin-bottom: 0.5rem;
+}
+
+.campo-texto p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+
+.social {
+    width: 100%;
+    height: 25px;
+    display: inline-flex;
+    justify-content: center;
+}
+
+#github, #instagram, #x, #tik-tok {
+    width: 30px;
+    height: 30px;
+    background-color: #C9B18C;
+    color: #000000;
+    box-shadow: 1px 1px 1px #5E5247, 7px 1px 7px #000000;
+    border-radius: 5px;
+    padding: 2px 4px;
+    margin: auto 5px;
+}
+
+.container {
+    width: 100%;
+    height: 400px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid #C9B18C;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 39px;
+  width: 320px;
+  height: 220px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  font-weight: bold;
+  color: #5E5247;
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.card p {
+  color: #8D847C;
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+
+.home-livros {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.home-livros h1 {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.container-livros {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.livro {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: relative;
+  margin: 10px 30px 10px 0;
+}
+
+
+.livro img {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.livro .titulo {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.livro .autor {
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.livro .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.livro:hover .overlay {
+  opacity: 1;
+}
+
+.livro .acoes {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.livro:hover .acoes {
+  opacity: 1;
+}
+
+.livro .acoes a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+}
+
+.livro .acoes a.saiba-mais {
+  background-color: #333;
+}
+
+.livro .acoes a.comprar {
+  background-color: #f00;
+}
+
+
+  @media (max-width: 768px) {
+  
+    .menu {
+        display: flex;
+        position: fixed;
+        align-items: center;
+    }
+
+    .menu li {
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 5px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .nav-bar {
+        display: none;
+    }
+
+    .nav-item {
+        display: none;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .icon-menu-mobile {
+       display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+  .icon-menu-mobile button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+        flex-direction: column;
+        text-align: center;
+}
+
+.icon-menu-mobile img {
+    width: 100%;
+    height: auto;
+    display: flex;
+        flex-direction: column;
+        text-align: center;
+}
+
+
+    .menu-mobile ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .menu-mobile .nav-item {
+        display: block;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-mobile button {
+    display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .open {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .container {
+    display: inline-flex;
+    justify-content: center;
+}
+    .card {
+        width: 120px;
+    }
+    
+    .card p {
+        font-size: 9px;
+    }
+    
+    #perfil {
+        flex-direction: column;
+    }
+    
+    #img-perfil {
+        margin-bottom: 10px;
+    }
+
+  .container-livros {
+  height: 200px;
+  margin: 0 2.5rem 0 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px; /* Espaçamento entre livros de 10px */
+}
+
+.livro {
+  display: flex;
+  align-items: center;
+  max-width: 100px; /* Reduz a largura máxima dos livros */
+  padding: 5px; /* Reduz o padding interno dos livros */
+  ...
+}
+
+.livro img {
+  max-width: 65px; /* Define a largura da imagem como 70px */
+  height: auto; /* Mantém a altura da imagem proporcional */ /* Centraliza a imagem horizontalmente */
+}
+
+
+.livro .titulo {
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.livro .autor {
+  font-size: 9px;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.livro .overlay {
+  width: 100%; /* Define a largura do overlay como 70px */
+  height: 100%; /* Define a altura do overlay como 70px */
+  top: 50%; /* Posiciona o overlay verticalmente no centro */
+  left: 50%; /* Posiciona o overlay horizontalmente no centro */
+  transform: translate(-50%, -50%); /* Ajusta o posicionamento do overlay */
+}
+
+.livro:hover .overlay {
+  opacity: 1;
+}
+
+.livro .acoes {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.livro:hover .acoes {
+  opacity: 1;
+}
+
+.livro .acoes a {
+  padding: 3px 8px; /* Reduz o padding dos botões */
+  font-size: 9px; /* Reduz o tamanho da fonte dos botões */
+  ...
+}
+
+.livro .acoes a.saiba-mais {
+  background-color: #333;
+  ...
+}
+
+.livro .acoes a.comprar {
+  background-color: #f00;
+  ...
+}
+
+  
+
